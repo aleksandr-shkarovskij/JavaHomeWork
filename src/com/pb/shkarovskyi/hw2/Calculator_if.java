@@ -33,7 +33,8 @@ public class Calculator_if {
         } else if (Objects.equals(sign, "/")) {
             if (y == 0)
                 System.out.println("На 0 делить нельзя, попробуйте заново");
-            System.out.print(x + " / " + y + " = " + (x / y));
+            if (y != 0)
+                System.out.print(x + " / " + y + " = " + (x / y));
         } else {
             System.out.print("Неверный ввод");
         }
