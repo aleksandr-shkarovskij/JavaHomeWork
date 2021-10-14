@@ -67,7 +67,7 @@ public class Interval_switch {
             case 48:
             case 49:
             case 50:
-                System.out.println("Ваш диапазон 36 - 50");
+                System.out.println("Ваш диапазон 36 - 50!");
                 break;
             case 51:
             case 52:
