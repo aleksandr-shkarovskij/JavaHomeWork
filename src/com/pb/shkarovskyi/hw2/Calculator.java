@@ -8,16 +8,16 @@ public class Calculator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(in);
         String sign; // = "/"; // + - * /
-        int x;
-        int y;
+        int operand1;
+        int operand2;
 
         System.out.println("Введите первое число");
 
-        x = scan.nextInt();
+        operand1 = scan.nextInt();
 
         System.out.println("Введите второе число");
 
-        y = scan.nextInt();
+        operand2 = scan.nextInt();
 
         System.out.println("Введите действие + - * /");
 
@@ -25,19 +25,19 @@ public class Calculator {
 
         switch (sign) {
             case "+":
-                System.out.print(x + " + " + y + " = " + (x + y));
+                System.out.print(operand1 + " + " + operand2 + " = " + (operand1 + operand2));
                 break;
             case "-":
-                System.out.print(x + " - " + y + " = " + (x - y));
+                System.out.print(operand1 + " - " + operand2 + " = " + (operand1 - operand2));
                 break;
             case "*":
-                System.out.print(x + " * " + y + " = " + (x * y));
+                System.out.print(operand1 + " * " + operand2 + " = " + (operand1 * operand2));
                 break;
             case "/":
-                if (y == 0)
+                if (operand2 == 0)
                     System.out.println("На 0 делить нельзя, попробуйте заново");
-                if (y != 0)
-                    System.out.print(x + " / " + y + " = " + (x / y));
+                if (operand2 != 0)
+                    System.out.print(operand1 + " / " + operand2 + " = " + (operand1 / operand2));
                 break;
             default:
                 System.out.println("Неверный ввод");
