@@ -7,7 +7,7 @@ public class Interval {
         Scanner scan = new Scanner(System.in);
         int y;
 
-        System.out.println("Введите число в диапазоне 0-100");
+        System.out.println("Введите целое число в диапазоне 0-100");
 
         y = scan.nextInt();
 
