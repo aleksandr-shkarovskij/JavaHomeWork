@@ -33,10 +33,6 @@ public class Anagram {
 
         String valueOfchar1 = String.valueOf(chArr1);
         String valueOfchar2 = String.valueOf(chArr2);
-        valueOfchar1 = valueOfchar1.replaceAll(" ", "");
-        valueOfchar2 = valueOfchar2.replaceAll(" ", "");
-        System.out.println(valueOfchar1);
-        System.out.println(valueOfchar2);
 
         result = valueOfchar1.equalsIgnoreCase(valueOfchar2);
         return result;
@@ -46,13 +42,20 @@ public class Anagram {
 
         Scanner sc = new Scanner(System.in);
         String s1, s2;
+        boolean finRes;
 
         System.out.println("Введите предложение №1");
         s1 = sc.nextLine().replaceAll("(?U)[\\pP\\s]", "");
         System.out.println("Введите предложение №2");
         s2 = sc.nextLine().replaceAll("(?U)[\\pP\\s]", "");
 
-        System.out.println(work(s1, s2));
+        finRes = work(s1, s2);
 
+        if (finRes) {
+            System.out.println("Введенные фразы являются анаграммой!!!");
+        }
+        else {
+                System.out.println("Введенные фразы НЕ являются анаграммой!!!");
+        }
     }
 }
